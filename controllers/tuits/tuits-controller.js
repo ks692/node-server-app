@@ -24,7 +24,6 @@ const updateTuit = async (req, res) => {
     const status = await tuitsDao.updateTuit(tuitdIdToUpdate,
             updates);
     console.log(status)
-    res.json(status);
     res.sendStatus(200)
 }
 
@@ -32,7 +31,7 @@ const updateTuit = async (req, res) => {
 const deleteTuit = async (req, res) => {
     const tuitdIdToDelete = req.params.tid;
     const status = await tuitsDao.deleteTuit(tuitdIdToDelete);
-    res.json(status);
+    res.sendStatus(200)
 }
 
 
